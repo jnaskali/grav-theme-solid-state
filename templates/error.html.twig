@@ -1,0 +1,20 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<section id="wrapper">
+    <header>
+        <div class="inner">
+            <h2>Error {{ page.header.http_response_code }}</h2>
+            {{ page.content }}
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="wrapper">
+        <div class="inner">
+	 Go <a href="#" onclick="window.history.back();return false;">back</a> or return to the <a href="{{ page.find("/").url }}">front page</a>.
+        </div>
+    </div>
+</section>
+
+{% endblock %}
